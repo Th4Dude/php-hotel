@@ -58,6 +58,36 @@ $hotels = [
 </head>
 <body>
 
+    <!-- Array Hotels -->
+
+    <div class="container">
+		<h1>Php Hotel List</h1>
+		<table class="table">
+			<thead>
+				<tr>
+					<th>Name</th>
+					<th>Description</th>
+					<th>Parking</th>
+					<th>Vote</th>
+					<th>Distance to center</th>
+				</tr>
+			</thead>
+			<tbody>
+				<?php foreach ($hotels as $hotel) { ?>
+				<tr>
+					<td><?php echo $hotel['name']; ?></td>
+					<td><?php echo $hotel['description']; ?></td>
+					<td><?php echo ($hotel['parking'] ? 'Yes' : 'No'); ?></td>
+					<td><?php echo $hotel['vote']; ?></td>
+					<td><?php echo $hotel['distance_to_center']; ?> km</td>
+				</tr>
+				<?php } ?>
+			</tbody>
+		</table>
+    </div>
+      <!-- Array Hotels -->
+
+
     <!-- Bootstrap Js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
     <!-- Bootstrap Js -->
